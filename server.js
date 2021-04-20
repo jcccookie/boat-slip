@@ -5,6 +5,7 @@ const boatRouter = require('./api/boat');
 const slipRouter = require('./api/slip');
 
 const app = express();
+app.enable('trust proxy');
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {

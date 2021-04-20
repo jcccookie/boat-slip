@@ -2,7 +2,7 @@ const { Router } = require('express');
 const {Datastore} = require('@google-cloud/datastore');
 const dotenv = require('dotenv');
 
-const datastore = new Datastore();
+const datastore = new Datastore({ projectId: process.env.PROJECT_ID });
 const router = new Router();
 dotenv.config();
 
